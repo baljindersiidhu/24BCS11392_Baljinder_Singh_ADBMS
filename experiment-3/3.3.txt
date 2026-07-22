@@ -1,0 +1,6 @@
+Submission link: https://leetcode.com/problems/customers-who-never-order/submissions/2076631773/
+
+code:
+
+SELECT name as Customers FROM Customers 
+WHERE id NOT IN (SELECT CustomerID FROM Orders);
