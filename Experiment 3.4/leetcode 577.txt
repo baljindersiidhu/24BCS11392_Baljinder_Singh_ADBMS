@@ -1,0 +1,8 @@
+Submission link:https://leetcode.com/problems/employee-bonus/submissions/2084583668/
+
+# Write your MySQL query statement below
+select employee.name,b.bonus from employee
+left join bonus as b
+on employee.empid=b.empid
+where b.bonus is null
+or b.bonus<1000;
