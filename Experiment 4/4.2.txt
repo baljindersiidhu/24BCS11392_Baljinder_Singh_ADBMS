@@ -1,0 +1,9 @@
+Submission Link:https://www.codechef.com/viewsolution/1321434301
+
+Code:
+-- Write a query to do the following:
+
+-- FULL OUTER JOIN the 'student' and 'course' tables using 'Course_id' to match the tables. Output the joined table.
+select * from student 
+full outer join Course
+on student.Course_id=course.Course_id;
