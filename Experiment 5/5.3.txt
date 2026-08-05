@@ -1,0 +1,24 @@
+
+do $$
+
+declare
+age int:=13;
+
+
+begin  
+
+if age>=18 then
+RAISE NOTICE 'your are an % adult and you are eliglible to vote',age;
+elsif age<18 and age>10 then
+RAISE NOTICE  'your are an % teenager and you are  not eliglible to vote',age;
+else
+raise notice 'you are bachaaa';
+
+end if;
+
+end;
+
+
+
+$$
+
