@@ -1,0 +1,8 @@
+code:
+# Write your MySQL query statement below
+
+select s1.tweet_id from tweets as s1
+where LENGTH(content)>15;
+
+
+submission link:https://leetcode.com/problems/invalid-tweets/submissions/2094808014/
