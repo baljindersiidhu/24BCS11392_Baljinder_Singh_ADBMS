@@ -1,0 +1,30 @@
+CREATE TABLE student (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    rollno INT,
+    course VARCHAR(50),
+    marks INT
+);
+
+INSERT INTO student (id, name, rollno, course, marks)
+VALUES
+(1, 'Rahul', 101, 'BCA', 85),
+(2, 'Aman', 102,'BCA', 72),
+(3, 'Priya', 103, 'BBA', 90),
+(4, 'Simran', 104, 'BCA', 65),
+(5, 'Arjun', 105, 'BBA', 78);
+
+
+CREATE VIEW student_view AS
+SELECT id, name, course
+FROM student;
+
+SELECT * FROM student_view;
+
+
+CREATE MATERIALIZED VIEW high_scorers AS
+SELECT id, name, course, marks
+FROM student
+WHERE marks > 75;
+
+SELECT * FROM high_scorers;
