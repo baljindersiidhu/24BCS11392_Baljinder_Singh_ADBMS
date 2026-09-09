@@ -1,0 +1,23 @@
+SET SERVEROUTPUT ON;
+
+DECLARE
+    CURSOR c1 IS
+        SELECT Name, Salary
+        FROM Staff
+        ORDER BY Salary DESC;
+
+    v_name Staff.Name%TYPE;
+    v_salary Staff.Salary%TYPE;
+BEGIN
+    OPEN c1;
+
+    FOR i IN 1..5 LOOP
+        FETCH c1 INTO v_name, v_salary;
+        EXIT WHEN c1%NOTFOUND;
+
+        DBMS_OUTPUT.PUT_LINE(v_name || ' - ' || v_salary);
+    END LOOP;
+
+    CLOSE c1;
+END;
+/
